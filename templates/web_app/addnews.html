@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% block title %} ADD NEWS {% endblock title %}
+{% block content %} 
+<div class="py-5">
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="title" class="form-label">TITLE</label>
+      <input type="text" class="form-control" id="title" aria-describedby="titleHelp" name="title">
+    
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label">CONTENT</label>
+      <textarea type="text" class="form-control" id="content" name="content"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% if messages %}
+{% for items in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{items}}</strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>  
+{% endfor %}
+{% endif %}
+
+
+
+
+
+
+
+
+
+{% endblock content %}

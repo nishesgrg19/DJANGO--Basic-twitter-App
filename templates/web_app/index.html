@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% block title %} INDEX PAGE {% endblock title %}
+{% block content %}
+<div class="py-5 contents">
+{% if News %}
+{% for items in News %}
+    
+        <h2>{{items.title}}</h2>
+        <h6>{{items.content}}</h6>
+        <small>{{items.date}}</small>
+    {% if items.author_id == request.user.id  or user.is_superuser %}  
+        <a class="btn btn-sm btn-danger" href="{% url 'delete' id=items.id %}">DELETE</a>
+        <a class=" btn btn-sm btn-success" href="{% url 'edit' id=items.id %}">EDIT</a>
+    {% endif %}
+     
+        
+        
+        
+      
+{% endfor %}
+{% else %}
+    <h3>SORRY ...Empty field !!!</h3>
+{% endif %}
+<div class="text-center py-4">
+    <a class="btn btn-primary text-white border border-dark" href="{% url 'add' %}">ADD NEWS</a>
+</div>
+</div>
+
+{% endblock content %}

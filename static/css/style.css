@@ -1,0 +1,12 @@
+body{background-image: linear-gradient(to bottom,beige,lightgreen);}
+.main{background-image: linear-gradient(to bottom,#eb00ff82,#00f3ff,#50ff0096);border-radius: 23px;border: 2px solid black;
+
+width: 900px; height: 900px;overflow-y: scroll;}
+.ok1{background-image: linear-gradient(to right,orange,aqua,lawngreen);color:black;width: 300px;
+    height:60px;margin: auto;border-radius: 15px;border: 2px solid navy;margin-top: 15px;font-weight: 600;padding: 10px 0px;}
+
+.table{width: 400px;margin: auto; margin-top: 30px;border-radius: 15px;}
+.form-control{width: 300px;margin: auto;border: 1px solid black;}
+.contents{border: 1px solid black;width: 700px;margin: auto;border-radius: 30px;margin-top: 60px;}
+.info{background-color: aliceblue;color: black;width: 120px;font-weight: 900;padding: 8px;text-decoration: none;border-radius: 20px};
+.sign{padding-top: 400px;}

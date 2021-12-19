@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+{% block title %} EDIT PAGE  {% endblock title %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="title" class="form-label">TITLE</label>
+      <input type="text" class="form-control" id="title" aria-describedby="titleHelp" name="title" value="{{News.title}}">
+    
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label">CONTENT</label>
+      <textarea type="text" class="form-control" id="content" name="content" >{{News.content}}</textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+
+
+
+
+
+
+{% endblock content %}

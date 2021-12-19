@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% block title %}RESET PASSWORD{% endblock title %}
+{% block content %}
+<form method="POST">
+  {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Old Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="oldpassword">
+      </div>
+    
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"> New Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="newpassword">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+
+
+{% endblock content %}

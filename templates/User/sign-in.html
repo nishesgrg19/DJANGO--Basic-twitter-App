@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %} LOGIN PAGE {% endblock title %}
+{% block content %}
+<div class="py-5">
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="username" class="form-label"><h5>Username</h5></label>
+        <input type="text" class="form-control" id="username" aria-describedby="email" name="username">
+       
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"><h5>Password</h5></label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+    </div>
+    <div class="py-4">
+    <button type="submit" class="btn btn-primary border border dark text-white">Submit</button>
+  </div>
+  </form>
+</div>
+{% if messages %}
+{% for items in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{items}}</strong> 
+   
+  </div>  
+{% endfor %}
+{% endif %}
+
+
+
+
+
+
+
+
+{% endblock content %}
